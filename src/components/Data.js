@@ -15,7 +15,7 @@ export const programData = [
         exchangeRate   : "17.007",
         requirements   : [],
         benefits       : ["Sertifikat + Pelatihan", "Mess (Tempat Tinggal)", "Paspor",
-                          "Medical Checkup", "KTKLN", "Visa Kerja", "Free Extend 8 atau 12 Bulan"],
+                          "Medical Checkup", "KTKLN", "Visa Kerja", "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
         age       : "20 s/d 40 Tahun",
@@ -41,7 +41,7 @@ export const programData = [
         exchangeRate   : "17.007",
         requirements   : [],
         benefits       : ["Sertifikat + Pelatihan/Paspor", "Mess (Tempat Tinggal)",
-                          "Medical Checkup", "KTKLN", "Visa Kerja", "Free Extend 8 atau 12 Bulan"],
+                          "Medical Checkup", "KTKLN", "Visa Kerja", "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
         age       : "20 s/d 40 Tahun",
@@ -69,7 +69,7 @@ export const programData = [
         exchangeRate   : "17.007",
         requirements   : [],
         benefits   : ["Mess (Tempat Tinggal)", "Medical Checkup", "KTKLN", "Visa Kerja", "Tiket PP", 
-                      "Free Extend 8 atau 12 Bulan"],
+                      "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
         age       : "20 s/d 40 Tahun",
@@ -97,7 +97,7 @@ export const programData = [
         exchangeRate   : "4.750",
         requirements   : [],
         benefits   : ["Mess (Tempat Tinggal)", "Medical Checkup", "KTKLN", "Visa Kerja", 
-                      "Free Extend 8 atau 12 Bulan"],
+                      "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
         age       : "20 s/d 40 Tahun",
@@ -138,8 +138,8 @@ export const programData = [
         salaryIdr      : "11.750.000 - 14.250.000",         
         exchangeRate   : "4.750",
         requirements   : [],
-        benefits   : ["Mess (Tempat Tinggal)", "Medical Checkup", "KTKLN", "Visa Kerja", 
-                      "Free Extend 8 atau 12 Bulan"],
+        benefits   : ["Mess (Tempat Tinggal)", "Medical Checkup", "KTKLN", "Visa Kerja", "Tiket PP", 
+                      "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
         age       : "20 s/d 40 Tahun",
@@ -165,7 +165,7 @@ export const programData = [
         exchangeRate   : "17.007",
         requirements   : [],
         benefits       : ["Sertifikat + Pelatihan", "Mess (Tempat Tinggal)", "Paspor",
-                          "Medical Checkup", "KTKLN", "Visa Kerja", "Free Extend 8 atau 12 Bulan"],
+                          "Medical Checkup", "KTKLN", "Visa Kerja", "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
         age       : "20 s/d 40 Tahun",
@@ -191,7 +191,7 @@ export const programData = [
         exchangeRate   : "17.007",
         requirements   : [],
         benefits       : ["Sertifikat + Pelatihan/Paspor", "Mess (Tempat Tinggal)",
-                          "Medical Checkup", "KTKLN", "Visa Kerja", "Free Extend 8 atau 12 Bulan"],
+                          "Medical Checkup", "KTKLN", "Visa Kerja", "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
         age       : "20 s/d 40 Tahun",
@@ -217,7 +217,7 @@ export const programData = [
         exchangeRate   : "17.007",
         requirements   : [],
         benefits       : ["Sertifikat + Pelatihan/Paspor", "Mess (Tempat Tinggal)",
-                          "Medical Checkup", "KTKLN", "Visa Kerja", "Free Extend 8 atau 12 Bulan"],
+                          "Medical Checkup", "KTKLN", "Visa Kerja", "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
         age       : "20 s/d 40 Tahun",
