@@ -159,9 +159,8 @@
             <p class="text-center text-xs text-red-700 italic pt-2">*Syarat & ketentuan berlaku. Hubungi admin untuk rincian biaya.</p>
           </div>
 
-          <!-- TOMBOL AKSI -->
           <div class="flex flex-col md:flex-row overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
-            <a href="https://wa.me/nomor-wa-balina" target="_blank" class="flex-1 py-5 bg-[#C23A2B] hover:bg-red-800 text-white text-center font-bold transition-all uppercase tracking-wider text-sm">
+            <a href="https://wa.me/6287860744733" target="_blank" class="flex-1 py-5 bg-[#C23A2B] hover:bg-red-800 text-white text-center font-bold transition-all uppercase tracking-wider text-sm">
               Daftar Sekarang
             </a>
             <router-link to="/#program" class="flex-1 py-5 bg-white hover:bg-slate-50 text-slate-700 text-center font-bold transition-all border-t md:border-t-0 md:border-l border-slate-200 uppercase tracking-wider text-sm">

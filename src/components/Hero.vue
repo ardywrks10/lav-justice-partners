@@ -53,7 +53,7 @@
                 </div>
                 <div class="lg:w-1/2 relative reveal delay-6 mt-16 lg:mt-0">
                     <div class="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white">
-                        <img src="/images/program/spa_2.avif" 
+                        <img src="/images/program/hero.jpg" 
                             alt="Professional Spa Training" 
                             class="w-full object-cover"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-red-900/40 to-transparent"></div>

@@ -18,7 +18,7 @@ export const programData = [
                           "Medical Checkup", "KTKLN", "Visa Kerja", "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
-        age       : "20 s/d 40 Tahun",
+        age       : "18 s/d 40 Tahun",
         height    : "Tidak ada persyaratan",
         weight    : "Tidak ada persyaratan",
         language  : "Tidak ada persyaratan",
@@ -44,7 +44,7 @@ export const programData = [
                           "Medical Checkup", "KTKLN", "Visa Kerja", "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
-        age       : "20 s/d 40 Tahun",
+        age       : "18 s/d 40 Tahun",
         height    : "Tidak ada persyaratan",
         weight    : "Tidak ada persyaratan",
         language  : "Tidak ada persyaratan",
@@ -72,7 +72,7 @@ export const programData = [
                       "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
-        age       : "20 s/d 40 Tahun",
+        age       : "18 s/d 40 Tahun",
         height    : "Tidak ada persyaratan",
         weight    : "Tidak ada persyaratan",
         language  : "Tidak ada persyaratan",
@@ -96,11 +96,11 @@ export const programData = [
         salaryIdr      : "11.750.000 - 14.250.000",         
         exchangeRate   : "4.750",
         requirements   : [],
-        benefits   : ["Mess (Tempat Tinggal)", "Medical Checkup", "KTKLN", "Visa Kerja", 
+        benefits   : ["Mess (Tempat Tinggal)", "Medical Checkup", "KTKLN", "Visa Kerja", "Tiket PP",
                       "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
-        age       : "20 s/d 40 Tahun",
+        age       : "18 s/d 40 Tahun",
         height    : "Tidak ada persyaratan",
         weight    : "Tidak ada persyaratan",
         language  : "English (Intermediate)",
@@ -142,7 +142,7 @@ export const programData = [
                       "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
-        age       : "20 s/d 40 Tahun",
+        age       : "18 s/d 40 Tahun",
         height    : "Tidak ada persyaratan",
         weight    : "Tidak ada persyaratan",
         language  : "English (Intermediate)",
@@ -168,7 +168,7 @@ export const programData = [
                           "Medical Checkup", "KTKLN", "Visa Kerja", "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
-        age       : "20 s/d 40 Tahun",
+        age       : "18 s/d 40 Tahun",
         height    : "Tidak ada persyaratan",
         weight    : "Tidak ada persyaratan",
         language  : "Tidak ada persyaratan",
@@ -194,7 +194,7 @@ export const programData = [
                           "Medical Checkup", "KTKLN", "Visa Kerja", "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
-        age       : "20 s/d 40 Tahun",
+        age       : "18 s/d 40 Tahun",
         height    : "Tidak ada persyaratan",
         weight    : "Tidak ada persyaratan",
         language  : "Tidak ada persyaratan",
@@ -220,7 +220,7 @@ export const programData = [
                           "Medical Checkup", "KTKLN", "Visa Kerja", "Job 8 atau 12 Bulan (Free Biaya Extend)"],
 
         gender    : "Pria/Wanita",
-        age       : "20 s/d 40 Tahun",
+        age       : "18 s/d 40 Tahun",
         height    : "Tidak ada persyaratan",
         weight    : "Tidak ada persyaratan",
         language  : "Tidak ada persyaratan",
