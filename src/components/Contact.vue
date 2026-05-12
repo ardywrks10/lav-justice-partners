@@ -153,12 +153,14 @@
         const data = formData.value; 
         
         const pesan =
-            `Halo, saya ingin menghubungi Anda.\n\n` +
-            `*Nama Lengkap:* ${data.name}\n` +
-            `*Umur:* ${data.age} tahun\n` +
-            `*Jenis Kelamin:* ${data.gender}\n` +
-            `*Asal Kota/Daerah:* ${data.origin}\n` +
-            `*Pengalaman:*\n${data.experience}`;
+            `Halo, perkenalkan saya....
+
+            • *Nama Lengkap:* ${data.name}
+            • *Umur:* ${data.age} tahun
+            • *Jenis Kelamin:* ${data.gender}
+            • *Asal Kota/Daerah:* ${data.origin}
+            • *Pengalaman:* 
+            ${data.experience}`;
 
         const encoded = encodeURIComponent(pesan);
         const waUrl = `https://wa.me/6287860744733?text=${encoded}`;
