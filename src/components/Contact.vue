@@ -153,7 +153,7 @@
         const data = formData.value; 
         
         const pesan =
-            `Halo, perkenalkan saya....
+            `Halo, saya ingin bertanya terkait program....
 
             • *Nama Lengkap:* ${data.name}
             • *Umur:* ${data.age} tahun

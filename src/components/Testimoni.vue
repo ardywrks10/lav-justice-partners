@@ -92,8 +92,8 @@
     const hasAnimated = ref(false);
     const stats = ref([
         { label: 'Spa Therapist', targetValue: 247, displayValue: 0, icon: 'spa.png' },
-        { label: 'Hospitality', targetValue: 210, displayValue: 0, icon: 'housekeeper.png' },
-        { label: 'Public Area', targetValue: 45, displayValue: 0, icon: 'public_area.png' }
+        { label: 'Hospitality', targetValue: 59, displayValue: 0, icon: 'housekeeper.png' },
+        { label: 'Public Area', targetValue: 30, displayValue: 0, icon: 'public_area.png' }
     ]);
     const currentIndex = ref(0);
     const visibleCards = ref(3);
@@ -103,25 +103,25 @@
             name: "Ni Made Indah Sari",
             position: "Spa Therapist - Dubai",
             message: "Selama pelatihan di sini, saya banyak belajar teknik massage yang rapi dan sesuai standar kerja di hotel. Pengalaman ini cukup membantu saya saat mulai bekerja di Dubai.",
-            image: "public/images/tester/tester_1.avif"
+            image: "../public/images/tester/tester_1.avif"
         },
         {
             name: "I Kadek Wiadnyana",
             position: "Spa Therapist - Turki",
             message: "Materinya cukup jelas dan langsung ke praktik. Saya juga belajar soal kedisiplinan kerja, yang ternyata penting saat mulai bekerja di industri perhotelan di Turki.",
-            image: "public/images/tester/tester_2.avif"
+            image: "../public/images/tester/tester_2.avif"
         },
         {
             name: "Luh Putu Ayu Lestari",
             position: "Spa Therapist - Maldives",
             message: "Selain teknik, saya juga dibantu dalam bahasa dan etika hospitality. Itu sangat membantu saat harus berinteraksi dengan tamu dari berbagai negara di Maldives.",
-            image: "public/images/tester/tester_3.avif"
+            image: "../public/images/tester/tester_3.avif"
         },
         {
-            name: "I Nyoman Gede Putra",
-            position: "Spa Therapist - Polandia",
+            name: "I Nyoman Putra Partawan",
+            position: "Spa Therapist - Dubai",
             message: "Instrukturnya membimbing dengan sabar sampai saya cukup siap untuk kerja. Dari sini saya jadi lebih percaya diri saat mulai bekerja di luar negeri.",
-            image: "public/images/tester/tester_4.avif"
+            image: "../public/images/tester/tester_4.avif"
         }
     ]);
 
