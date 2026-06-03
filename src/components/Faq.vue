@@ -1,89 +1,93 @@
 <template>
-    <section class="py-12 md:py-24 bg-gradient-to-br from-red-700 via-red-800 to-red-900 px-5"> 
-        <div id="faq"
-            class="relative w-full bg-white px-5 md:px-10 md:py-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto md:max-w-4xl rounded-lg">
-            
-            <div class="mx-auto py-12 lg:py-8">
-                <div class="reveal delay-1 flex flex-col items-center">
-                    <h4 class="mt-2 text-center text-xl md:text-2xl font-bold tracking-tight text-slate-900">Frequently Asked Question</h4>
-                    <div class="w-20 h-1 bg-red-700 mx-auto mt-5"></div>
-                    <p class="mt-4 text-sm sm:text-sm md:text-lg text-slate-600 max-w-3xl mx-auto text-center">
-                        Temukan jawaban atas pertanyaan umum seputar program pelatihan, sistem pembiayaan, serta peluang penempatan kerja.
-                    </p>
-                </div>
+  <main class="relative overflow-hidden flex flex-col">
+    
+    <section class="relative bg-white py-20 px-6 overflow-hidden">
+      <img src="/public/images/justice-bg.png" class="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-[400px] opacity-[0.2] pointer-events-none z-[5]" alt="decor logo" />
+      <div class="absolute -top-[20%] -left-[10%] w-[40rem] h-[40rem] rounded-full border border-gray-100 pointer-events-none"></div>
+      <div class="absolute -bottom-[20%] -right-[10%] w-[50rem] h-[50rem] rounded-full border border-gray-100 pointer-events-none"></div>
 
-                <div class="reveal delay-2 md:max-w-full mx-auto mt-6 md:mt-10 grid max-w-xl divide-y divide-neutral-200">
-                    <div v-for="faq in paginatedItems" :key="faq.id" class="py-4">
-                        <details class="group">
-                            <summary class="flex cursor-pointer list-none items-center justify-between font-medium text-slate-800 text-sm md:text-base">
-                                <span class="pr-4"> {{ faq.qst }}</span>
-                                <span class="transition group-open:rotate-180 shrink-0 text-red-600">
-                                    <svg fill="none" height="18" width="18" class="md:h-6 md:w-6" shape-rendering="geometricPrecision"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" viewBox="0 0 24 24">
-                                        <path d="M6 9l6 6 6-6"></path>
-                                    </svg>
-                                </span>
-                            </summary>
-                            <p v-html="faq.ans" class="group-open:animate-fadeIn mt-3 text-xs md:text-sm text-neutral-600 leading-relaxed text-justify">
-                            </p>
-                        </details>
-                    </div>
-                </div>
-
-                <div v-if="totalPages > 1" class="mt-10 flex items-center justify-center gap-2 border-t border-neutral-100 pt-6">
-                    <button 
-                        @click="currentPage > 1 ? currentPage-- : null"
-                        :class="{'opacity-30 cursor-not-allowed': currentPage === 1}"
-                        class="p-2 text-slate-500 hover:text-red-700 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                    </button>
-
-                    <div class="flex gap-1">
-                        <button 
-                            v-for="page in totalPages" 
-                            :key="page"
-                            @click="currentPage = page"
-                            :class="page === currentPage ? 'bg-red-700 text-white shadow-md' : 'text-slate-600 hover:bg-neutral-100'"
-                            class="w-8 h-8 md:w-10 md:h-10 rounded-md text-sm font-semibold transition-all duration-300">
-                            {{ page }}
-                        </button>
-                    </div>
-
-                    <button 
-                        @click="currentPage < totalPages ? currentPage++ : null"
-                        :class="{'opacity-30 cursor-not-allowed': currentPage === totalPages}"
-                        class="p-2 text-slate-500 hover:text-red-700 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-                    </button>
-                </div>
-            </div>
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <div class="flex items-center justify-center gap-3 mb-5">
+          <div class="w-10 h-[2px] bg-gray-400"></div>
+          <span class="text-sm font-bold tracking-widest text-gray-500 uppercase">LET'S TALK</span>
+          <div class="w-10 h-[2px] bg-gray-400"></div>
         </div>
+
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-5 font-serif tracking-tight">
+          Siap Mengembangkan <span class="italic text-[#F2A900] font-serif">Bisnis</span> Anda?
+        </h2>
+
+        <p class="text-base md:text-lg font-semibold text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+          Mulai dari pendirian usaha hingga penyelesaian sengketa, kami siap menjadi mitra hukum terpercaya dalam setiap langkah perkembangan bisnis anda
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <router-link to="/booking" class="w-full sm:w-auto px-6 py-3 bg-[#002D72] text-white text-sm font-bold tracking-wider transition-all shadow-md transform hover:-translate-y-0.5 rounded-sm">
+            Mulai Konsultasi
+          </router-link>
+          
+          <a href="https://wa.me/6287861413066" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 bg-transparent text-[#212121] text-sm font-bold tracking-widest rounded-none border border-gray-300 transition-colors shadow-md transform hover:-translate-y-0.5 rounded-sm">
+            WhatsApp Kami
+          </a>
+        </div>
+      </div>
     </section>
+    <section class="relative py-20 px-6 bg-gray-100">
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <div class="flex items-center justify-center gap-3 mb-5">
+          <div class="w-10 h-[2px] bg-gray-400"></div>
+          <span class="text-sm font-bold tracking-widest text-gray-500 uppercase">F.A.Q</span>
+          <div class="w-10 h-[2px] bg-gray-400"></div>
+        </div>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+          Pertanyaan yang Sering Diajukan
+        </h2>
+        <div class="w-12 h-1 bg-[#F2A900] mx-auto rounded-full mb-12"></div>
+      </div>
+
+      <div class="relative z-10 max-w-3xl mx-auto space-y-4">
+        <div v-for="(faq, index) in faqs" :key="index" class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-200">
+          <button @click="toggleFaq(index)" class="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none">
+            <h3 class="font-bold font-serif text-md text-slate-800 pr-4" :class="activeIndex === index ? 'text-[#F2A900]' : ''"> {{ faq.question }}</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500 transition-transform duration-300 flex-shrink-0" :class="{'rotate-180': activeIndex === index}" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div v-show="activeIndex === index" class="px-6 pb-6">
+            <p class="text-slate-700 text-base leading-relaxed">
+              {{ faq.answer }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </template>
 
 <script setup>
-    import { ref, computed } from 'vue';
+import { ref } from 'vue'
 
-    const currentPage  = ref(1);
-    const itemsPerPage = ref(5);
-    const faqItems = ref([
-        {id: 1, qst: 'Apa saja peluang pekerjaan (job opportunity) yang tersedia saat ini?', ans: 'Saat ini kami menyediakan berbagai peluang karier di industri hospitality, di antaranya posisi <span class="bold-main-text">spa therapist</span>, <span class="bold-main-text">housekeeping</span>, <span class="bold-main-text">steward</span>, <span class="bold-main-text">waiter/waitress</span>, <span class="bold-main-text">laundry management</span>, dan <span class="bold-main-text">public area</span>'},
-        {id: 2, qst: 'Bagaimana sistem penggunaan dana talang?', ans: 'Dalam sistem dana talang, biaya awal seperti <span class="bold-main-text">pembuatan paspor</span>, <span class="bold-main-text">pengurusan visa</span>, <span class="bold-main-text">medical check-up</span>, dan kebutuhan administrasi lainnya akan ditanggung terlebih dahulu oleh perusahaan. Pembayaran dapat dilakukan oleh kandidat setelah menerima gaji dari perusahaan penempatan.'},
-        {id: 3, qst: 'Berapa lama durasi pelatihan untuk setiap posisi pekerjaan?', ans: 'Durasi pelatihan berlangsung hingga maksimal <span class="bold-main-text">3 bulan</span>. Selama pelatihan, kandidat akan dibimbing oleh trainer berpengalaman sesuai dengan bidang pekerjaan yang dipilih.'},
-        {id: 4, qst: 'Apakah selama pelatihan disediakan fasilitas tempat tinggal (mess) bagi kandidat?', ans: 'Kami menyediakan fasilitas mess sebagai tempat tinggal bagi kandidat selama proses pelatihan berlangsung. <span class="bold-main-text">Mess</span> dilengkapi dengan berbagai fasilitas penunjang, seperti <span class="bold-main-text">tempat tidur</span>, <span class="bold-main-text">alat masak</span>, serta kebutuhan dasar lainnya untuk menunjang kenyamanan selama masa pelatihan.'},
-        {id: 5, qst: 'Negara mana saja yang biasanya menjadi tujuan penempatan kerja bagi kandidat?', ans: 'Saat ini, <span class="bold-main-text">Dubai</span> dan <span class="bold-main-text">Turki</span> menjadi destinasi penempatan kerja yang paling diminati oleh kandidat, mengingat pesatnya perkembangan industri hospitality di kedua negara tersebut. Selain itu, kami juga menyediakan peluang penempatan di beberapa negara lain seperti <span class="bold-main-text">Maldives</span>, <span class="bold-main-text">Polandia</span>, dan <span class="bold-main-text">Rusia</span>, yang turut menawarkan pengalaman kerja internasional dengan standar profesional.'},
-        {id: 6, qst: 'Apakah bisa mendaftar pelatihan tanpa bekerja ke luar negeri?', ans: 'Kandidat dapat mendaftar dan mengikuti program pelatihan tanpa harus melanjutkan penempatan kerja di luar negeri. Setelah menyelesaikan pelatihan, kandidat akan memperoleh berbagai benefit, seperti <span class="bold-main-text">peningkatan keterampilan</span>, <span class="bold-main-text">pengalaman kerja di perhotelan sekitar</span>, serta <span class="bold-main-text">sertifikat resmi</span> dari LKP sebagai bukti kompetensi.'},
-        {id: 7, qst: 'Dimana lokasi kantor dan LKP berada?', ans: 'Kantor kami berlokasi di Jl. Tukad Unda, Sumerta Kelod, Denpasar Timur, yang dapat diakses melalui tautan berikut: <a href="https://maps.google.com" target="_blank" class="text-red-700 font-semibold underline">Google Maps</a>. Sementara itu, lokasi LKP berada di Perumahan Puri Dolpin 99 Blok B No. 34, Kalibukbuk, Buleleng.'}
-    ]);
+const faqs = ref([
+  {
+    question: "Bagaimana proses konsultasi dengan advokat di firma kami?",
+    answer  : "Proses konsultasi dimulai dengan menghubungi kami melalui WhatsApp, telepon, atau formulir di website. Selain itu, anda juga dapat melakukan booking sesi konsultasi melalui fitur yang sudah disediakan, berdasarkan ketersediaan jadwal yang tertera."
+  },
+  {
+    question: "Berapa estimasi biaya penanganan kasus hukum?",
+    answer  : "Biaya penanganan kasus berbeda-beda, tergantung pada jenis dan tingkat kompleksitas perkara. Kami menerapkan prinsip transparansi dengan memberikan penjelasan rinci mengenai estimasi biaya dan honorarium di awal, sehingga anda dapat mempertimbangkannya dengan jelas sebelum menggunakan layanan kami."        
+  },
+  {
+    question: "Apakah kerahasiaan informasi dan data klien terjamin?",
+    answer  : "Kami berkomitmen penuh untuk menjaga kerahasiaan seluruh informasi, percakapan, dan dokumen klien sesuai dengan Kode Etik Profesi Advokat. Seluruh staf terikat oleh perjanjian kerahasiaan (NDA) dan menerapkan kebijakan perlindungan data yang ketat. Informasi klien tidak akan dibagikan kepada pihak mana pun tanpa persetujuan"
+  },
+  {
+    question: "Apakah Lav Justice Partner melayani klien di luar Bali?",
+    answer  : "Ya. Lav Justice Partner melayani klien di seluruh Indonesia. Konsultasi dapat dilakukan secara online maupun tatap muka sesuai kebutuhan."
+  }
+])
 
-    const totalPages = computed(()=>{
-        return Math.ceil(faqItems.value.length / itemsPerPage.value);
-    });
-
-    const paginatedItems = computed(()=>{
-        const start = (currentPage.value - 1) * itemsPerPage.value;
-        const end = start + itemsPerPage.value;
-        return faqItems.value.slice(start, end);
-    });
+const activeIndex = ref(0)
+const toggleFaq = (index) => {
+  activeIndex.value = activeIndex.value === index ? null : index
+}
 </script>

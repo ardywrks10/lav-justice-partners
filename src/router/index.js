@@ -1,17 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import ProgramDetail from '../views/ProgramDetail.vue';
-import JobSection from '../views/JobSection.vue';
+import BookView from '../views/BookView.vue';
 
 const routes = [
     { path: '/', name: 'Home', component: HomeView },
-    { path: '/program/:slug', name: 'ProgramDetail', component: ProgramDetail, props: true },
-    { path: '/karir', name: 'JobSection', component: JobSection, props: true}
+    { path: '/booking', name: 'Booking', component: BookView}
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes,
+    history: createWebHistory(), routes,
     scrollBehavior(to, from, savedPosition) {
         if (to.hash) {
             return {

@@ -1,19 +1,19 @@
 <script setup>
     import Hero from '../components/Hero.vue';
-    import Profil from '../components/Profil.vue';
-    import Program from '../components/Program.vue';
-    import Testi from '../components/Testimoni.vue';
-    import Faq from '../components/Faq.vue';
-    import Contact from '../components/Contact.vue';
+    import Stats from '../components/Stats.vue';
+    import Office from '../components/Office.vue';
+    import Motto from '../components/Motto.vue';
+    import Faq from '../components/FAQ.vue';
+    import Alert from '../components/Alert.vue';
 </script>
 
 <template>
     <main>
         <Hero />
-        <Profil />
-        <Program />
-        <Testi />
+        <Stats />
         <Faq />
-        <Contact />
+        <Motto />
+        <Alert />
+        <Office />
     </main>
 </template>
