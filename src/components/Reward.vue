@@ -4,7 +4,7 @@
       <div class="flex flex-col gap-8">
         <div class="space-y-4">
           <h2 class="text-3xl md:text-4xl font-bold tracking-wide font-serif leading-tight">
-            Mengapa Memilih <span class="text-[#F2A900]">LAV Justice Partners</span>?
+            Mengapa Memilih <span class="text-[#F2A900]">LAV Justice Partners</span>
           </h2>
           <p class="text-gray-400 text-md leading-relaxed text-justify">
             Lebih dari sekadar penasihat hukum, kami bertindak sebagai mitra strategis yang berdedikasi penuh dalam memberikan perlindungan hukum yang komprehensif terhadap bisnis anda</p>

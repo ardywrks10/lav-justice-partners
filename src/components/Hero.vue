@@ -3,7 +3,7 @@
     <img src="/public/images/images8.jpg" alt="bg-img" class="absolute right-0 top-0 h-full w-full object-cover lg:w-[60%] lg:rounded-bl-[120px]"/> 
     <div class="container mx-auto px-6 sm:px-10 relative z-10 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-12 text-center lg:text-left">
-        <div class="col-span-1 lg:col-span-6 xl:col-span-5 rounded-lg border border-white/70 bg-white/95 py-8 px-6 sm:px-8 shadow-2xl backdrop-blur-md backdrop-saturate-200">
+        <div class="col-span-1 lg:col-span-6 xl:col-span-5 rounded-sm border border-white/70 bg-white/95 py-8 px-6 sm:px-8 shadow-2xl backdrop-blur-md backdrop-saturate-200">
           
           <h1 class="text-[#1A1A1A] font-serif font-bold text-3xl lg:text-4xl leading-tight lg:leading-[1.2] max-w-xl mx-auto lg:mx-0 min-h-[150px] md:min-h-[180px] flex items-center justify-center lg:justify-start">
             <span>

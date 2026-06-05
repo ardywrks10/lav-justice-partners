@@ -11,7 +11,7 @@
           <div v-for="item in menuItems" :key="item.id" class="relative group h-full flex items-center">
             <router-link 
               :to="item.link" 
-              class="inline-flex items-center gap-1.5 text-base text-[#002D72] hover:text-[#002D72]/80 transition-colors py-2 relative "
+              class="inline-flex items-center gap-1.5 font-bold text-base text-[#002D72] hover:text-[#002D72]/80 transition-colors py-2 relative"
             >
               {{ item.name }}
               <svg v-if="item.subItems" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180 text-[#002D72]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -20,15 +20,26 @@
               <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#F2A900] transition-all duration-300 group-hover:w-full"></span>
             </router-link>
 
-            <div v-if="item.subItems" class="absolute left-0 top-[80%] w-44 bg-white/95 backdrop-blur-sm border border-gray-100 shadow-xl rounded-md py-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
-              <router-link 
-                v-for="sub in item.subItems" 
-                :key="sub.name" 
-                :to="sub.link" 
-                class="block px-4 py-2.5 text-base font-medium text-[#002D72] hover:bg-[#002D72]/5 hover:text-[#F2A900] transition-colors"
-              >
-                {{ sub.name }}
-              </router-link>
+            <div v-if="item.subItems" class="absolute left-1/2 -translate-x-1/2 top-[90%] w-[calc(100vw-3rem)] max-w-4xl bg-white border border-gray-100 shadow-2xl rounded-sm p-6 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+              <div class="border-b border-gray-100 pb-3 mb-4">
+                <h3 class="text-xl font-black tracking-tight text-[#002D72]">{{ item.name }}</h3>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <router-link 
+                  v-for="sub in item.subItems" 
+                  :key="sub.name" 
+                  :to="sub.link" 
+                  class="block p-3 rounded-sm hover:bg-[#002D72]/5 transition-all group/item"
+                >
+                  <div class="text-base font-bold text-[#002D72] group-hover/item:text-[#F2A900] transition-colors">
+                    {{ sub.name }}
+                  </div>
+                  <div class="text-xs text-gray-500 mt-1 font-normal leading-relaxed">
+                    {{ sub.desc }}
+                  </div>
+                </router-link>
+              </div>
             </div>
           </div>
         </div>
@@ -40,36 +51,38 @@
           </router-link>
         </div>
 
-        <button class="md:hidden p-2 text-[#002D72] hover:bg-black/5 rounded-sm transition-colors" @click="toggleMobileMenu">
+        <button class="md:hidden p-2 text-[#002D72] hover:bg-black/5 rounded-sm transition-colors z-50" @click="toggleMobileMenu">
           <svg v-if="!isMobileMenuOpen" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
-          <svg v-else class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg v-else class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </div>
 
-    <transition name="fade">
-      <div v-show="isMobileMenuOpen" class="md:hidden w-full bg-[#002D72]/85 backdrop-blur-md border-t border-white/10 shadow-2xl overflow-hidden">
-        <div class="px-6 py-4 space-y-1">
-          <div v-for="item in menuItems" :key="item.id" class="border-b border-white/10 last:border-none">
+    <div v-if="isMobileMenuOpen" @click="isMobileMenuOpen = false" class="md:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity duration-300"></div>
+    <transition name="slide">
+      <div v-show="isMobileMenuOpen" class="md:hidden fixed top-0 right-0 h-screen w-[320px] max-w-[85vw] bg-[#002D72] z-40 shadow-2xl flex flex-col justify-between pt-24 overflow-y-auto">
+        <div class="px-6 py-2 space-y-2 flex-1">
+          <div v-for="item in menuItems" :key="item.id" class="border-b border-white/5 last:border-none">
             
             <template v-if="item.subItems">
-              <button @click="toggleSubmenu(item.id)" class="flex items-center justify-between w-full py-3.5 text-base font-semibold text-white hover:text-[#F2A900]">
+              <button @click="toggleSubmenu(item.id)" class="flex items-center justify-between w-full py-4 text-lg font-bold text-white hover:text-[#F2A900] transition-colors">
                 {{ item.name }}
-                <svg class="w-4 h-4 transition-transform duration-300 text-white" :class="{ 'rotate-180': activeMobileSubmenu === item.id }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 transition-transform duration-300 text-white/70" :class="{ 'rotate-180 text-[#F2A900]': activeMobileSubmenu === item.id }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div v-show="activeMobileSubmenu === item.id" class="pl-4 pb-3 space-y-2.5 transition-all duration-300">
+              
+              <div v-show="activeMobileSubmenu === item.id" class="pl-4 pb-4 space-y-3.5">
                 <router-link 
                   v-for="sub in item.subItems" 
                   :key="sub.name" 
                   :to="sub.link" 
                   @click="isMobileMenuOpen = false" 
-                  class="block text-sm font-semibold text-white/70 hover:text-[#F2A900]"
+                  class="block text-base font-medium text-white/80 hover:text-[#F2A900] transition-colors"
                 >
                   {{ sub.name }}
                 </router-link>
@@ -80,18 +93,18 @@
               v-else
               :to="item.link" 
               @click="isMobileMenuOpen = false" 
-              class="block py-3.5 text-sm font-bold text-white hover:text-[#F2A900]"
+              class="block py-4 text-lg font-bold text-white hover:text-[#F2A900] transition-colors"
             >
               {{ item.name }}
             </router-link>
             
           </div>
-          
-          <div class="pt-4 pb-2">
-            <router-link to="/booking" @click="isMobileMenuOpen = false" class="flex justify-center items-center gap-2 w-full py-3 text-sm font-bold rounded-sm bg-[#F2A900] text-white">
-              Book Consultation
-            </router-link>
-          </div>
+        </div>
+        
+        <div class="p-6 border-t border-white/10 bg-[#001E4D]">
+          <router-link to="/booking" @click="isMobileMenuOpen = false" class="flex justify-center items-center gap-2 w-full py-3.5 text-base font-bold rounded-sm bg-[#F2A900] text-white hover:bg-[#d69500] transition-colors shadow-lg">
+            Book Consultation
+          </router-link>
         </div>
       </div>
     </transition>
@@ -111,9 +124,11 @@
         name: 'Services', 
         link: '/#services',
         subItems: [
-        { name: 'Visi', link: '/#visi' },
-        { name: 'Misi', link: '/#misi' },
-        { name: 'Sejarah', link: '/#sejarah' }
+          { name: 'Pendirian Badan Usaha', link: '/services/pendirian-badan-usaha', desc: 'Pendirian PT, CV, & PMA, Legalitas Korporasi, dan Anggaran Dasar & Kepatuhan' },
+          { name: 'Konsultasi Pajak', link: '/services/konsultasi-pajak', desc: 'Pendampingan Pemeriksaan Pajak, Restitusi Pajak, dan Penasihat Keuangan' },
+          { name: 'Litigasi dan Insolvensi', link: '/services/litigasi-dan-insolvensi', desc: 'Pidana & Perdata, Pengadilan Hubungan Industrial & Pajak, dan PKPU & Insolvensi' },
+          { name: 'Ketenagakerjaan dan SDM', link: '/services/ketenagakerjaan-dan-sdm', desc: 'Rekrutmen & Outsourcing, Manajemen Payroll & SOP, dan Pendampingan & Konsultasi KPI' },
+          { name: 'Lisensi dan Permit Bisnis', link: '/services/lisensi-dan-permit-bisnis', desc: 'Izin Operasional & Komersial, Sertifikasi Sektoral (OSS-RBA), dan Pemenuhan Komitmen Regulasi' }
         ]
     },
     { id: 3, name: 'About Us', link: '/#about' },
@@ -126,13 +141,12 @@
 </script>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(-10px);
-}
+  .slide-enter-active,
+  .slide-leave-active {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .slide-enter-from,
+  .slide-leave-to {
+    transform: translateX(100%);
+  }
 </style>

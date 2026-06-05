@@ -9,7 +9,7 @@
         </div>
         
         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-5 font-serif tracking-tight">
-          Apa Saja <span class="italic text-[#F2A900] font-serif">Layanan</span> Kami?
+          Apa Saja <span class="text-[#F2A900] font-serif">Layanan</span> Kami
         </h2>
 
         <p class="text-base md:text-lg font-semibold text-gray-600 max-w-2xl">
@@ -17,7 +17,7 @@
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-        <div class="lg:col-span-1 rounded-sm overflow-hidden border border-gray-100 relative shadow-md min-h-[480px] flex flex-col justify-between group cursor-pointer">
+        <div class="lg:col-span-1 rounded-sm overflow-hidden border border-gray-100 relative shadow-md h-[228px] lg:h-auto lg:min-h-[480px] flex flex-col justify-between group cursor-pointer">
           <img 
             :src="mainService.image" 
             :alt="mainService.title"
@@ -34,25 +34,13 @@
               ></div>
               
               <div class="space-y-2 transform group-hover:translate-y-[-2px] transition-transform duration-300">
-                <h3 class="text-2xl font-bold tracking-tight text-white leading-tight">
+                <h3 class="text-lg lg:text-2xl font-bold tracking-tight text-white leading-tight">
                   {{ mainService.title }}
                 </h3>
-                <span class="text-base text-gray-400 font-bold tracking-widest group-hover:text-amber-400 block">
+                <span class="text-sm lg:text-base text-gray-400 font-medium tracking-widest group-hover:text-amber-400 block">
                   {{ mainService.subtitle }}
                 </span>
               </div>
-            </div>
-
-            <div class="pt-6">
-              <a 
-                :href="'/services/' + mainService.slug" 
-                class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white hover:text-amber-400 transition-colors"
-              >
-                Read More
-                <svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
