@@ -51,7 +51,7 @@
       </div>
     </div>
 
-<transition name="fade">
+    <transition name="fade">
       <div v-show="isMobileMenuOpen" class="md:hidden w-full bg-[#002D72]/85 backdrop-blur-md border-t border-white/10 shadow-2xl overflow-hidden">
         <div class="px-6 py-4 space-y-1">
           <div v-for="item in menuItems" :key="item.id" class="border-b border-white/10 last:border-none">

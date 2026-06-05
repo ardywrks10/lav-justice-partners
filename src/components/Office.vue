@@ -1,5 +1,5 @@
 <template>
-  <section class="relative overflow-hidden bg-[#F5F5F5]  pb-20 px-4 sm:px-8">
+  <section class="relative overflow-hidden bg-[#F5F5F5]  pb-12 px-4 sm:px-8">
     <div class="container mx-auto max-w-6xl relative z-10 p-6 md:p-8">
       <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
         <div class="w-full lg:w-[450px] flex flex-col justify-center">
@@ -36,10 +36,10 @@
             </div>
           </div>
         </div>
-        <div class="w-full lg:flex-1 h-[220px] md:h-[260px] overflow-hidden rounded-none shadow-2xl shadow-[#051962]/15">
+        <div class="w-full lg:flex-1 h-[220px] md:h-[260px] overflow-hidden shadow-2xl shadow-[#051962]/15">
         <iframe 
             src="https://maps.google.com/maps?q=-8.673,115.224&t=k&z=17&output=embed" 
-            class="w-full h-full rounded-xl rounded-none border-0 transition-all duration-500 ease-in-out"
+            class="w-full h-full rounded-sm border-0 transition-all duration-500 ease-in-out"
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade"
         ></iframe>

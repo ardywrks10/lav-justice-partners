@@ -76,9 +76,9 @@
         </div>
         
         <form @submit.prevent="handleSubmit" class="flex flex-col gap-3">
-          <input v-model="formInquiry.name" type="text" placeholder="Name" class="w-full bg-[#222224] border border-gray-800 focus:border-[#002D72] focus:outline-none p-3 text-sm text-gray-200 rounded-sm" required>
-          <input v-model="formInquiry.email" type="email" placeholder="Confirm Email" class="w-full bg-[#222224] border border-gray-800 focus:border-[#002D72] focus:outline-none p-3 text-sm text-gray-200 rounded-sm" required>
-          <textarea v-model="formInquiry.needs" rows="3" placeholder="Tell us about your needs..." class="w-full bg-[#222224] border border-gray-800 focus:border-[#002D72] focus:outline-none p-3 text-sm text-gray-200 rounded-sm resize-none" required></textarea>
+          <input v-model="formInquiry.name" type="text" placeholder="Nama Lengkap" class="w-full bg-[#222224] border border-gray-800 focus:border-[#002D72] focus:outline-none p-3 text-sm text-gray-200 rounded-sm" required>
+          <input v-model="formInquiry.email" type="email" placeholder="Email" class="w-full bg-[#222224] border border-gray-800 focus:border-[#002D72] focus:outline-none p-3 text-sm text-gray-200 rounded-sm" required>
+          <textarea v-model="formInquiry.needs" rows="3" placeholder="Ceritakan kebutuhanmu kepada kami......." class="w-full bg-[#222224] border border-gray-800 focus:border-[#002D72] focus:outline-none p-3 text-sm text-gray-200 rounded-sm resize-none" required></textarea>
           
           <button type="submit" class="w-full md:w-auto self-start mt-2 px-8 py-3 bg-[#F2A900] hover:bg-[#D49400] text-white text-xs font-bold tracking-widest uppercase transition-all duration-300 rounded-sm shadow-md">
             Submit Inquiry
