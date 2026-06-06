@@ -132,7 +132,7 @@
         ]
     },
     { id: 3, name: 'About Us', link: '/#about' },
-    { id: 4, name: 'Articles', link: '/#article' },
+    { id: 4, name: 'Articles & News', link: '/#article' },
     { id: 5, name: 'Contact Us', link: '/#contact' }
     ];
 

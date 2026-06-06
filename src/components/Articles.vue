@@ -1,7 +1,9 @@
 <template>
-  <section class="bg-white text-slate-900 pt-12 pb-12 px-6 sm:px-8 lg:px-12 border-b border-gray-100">
+  <section ref="articlesSection" class="bg-white text-slate-900 pt-12 pb-12 px-6 sm:px-8 lg:px-12 border-b border-gray-100 overflow-hidden">
     <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12">
-      <div class="lg:col-span-1 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-gray-200 pb-8 lg:pb-0 lg:pr-8">
+      
+      <div class="lg:col-span-1 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-gray-200 pb-8 lg:pb-0 lg:pr-8 transform transition-all duration-1000 ease-out"
+           :class="isVisible ? 'translate-x-0 opacity-100' : '-translate-x-16 opacity-0'">
         <div class="space-y-4">
           <div class="w-12 h-1 bg-[#051962] rounded-sm"></div>
           <h2 class="text-4xl font-extrabold tracking-tight font-serif text-slate-950">Artikel & Berita</h2>
@@ -14,7 +16,11 @@
       <div class="lg:col-span-3 flex flex-col gap-6 overflow-hidden">
         <div class="w-full overflow-hidden">
           <div class="flex transition-transform duration-500 ease-in-out -mx-4" :style="{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }">
-            <div v-for="item in articlesList" :key="item.id" class="w-full md:w-1/3 shrink-0 px-4 transition-all duration-500">
+            
+            <div v-for="(item, index) in articlesList" :key="item.id" 
+                 class="w-full md:w-1/3 shrink-0 px-4 transform transition-all duration-700 ease-out"
+                 :class="isVisible ? 'translate-x-0 opacity-100' : 'translate-x-16 opacity-0'"
+                 :style="{ transitionDelay: isVisible ? `${index * 150}ms` : '0ms' }">
               <article class="flex flex-col bg-white border border-gray-100 rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
                 <div class="relative aspect-[16/10] w-full overflow-hidden bg-gray-100">
                   <img :src="item.image" :alt="item.title" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" loading="lazy"/>
@@ -44,10 +50,12 @@
                 </div>
               </article>
             </div>
+
           </div>
         </div>
 
-        <div class="flex justify-end items-center gap-3 mt-2">
+        <div class="flex justify-end items-center gap-3 mt-2 transform transition-all duration-1000 ease-out delay-[450ms]"
+             :class="isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'">
           <button @click="prevSlide" :disabled="currentIndex === 0" class="w-10 h-10 border border-slate-300 bg-slate-50 text-slate-900 rounded-sm flex items-center justify-center transition-all duration-300 hover:bg-[#051962] hover:border-[#051962] hover:text-white disabled:opacity-20 disabled:bg-slate-50 disabled:border-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed" aria-label="Previous slide">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -76,6 +84,11 @@
     const articlesList = ref(articles);
     const currentIndex = ref(0);
     const itemsPerView = ref(3);
+    
+    const articlesSection = ref(null);
+    const isVisible = ref(false);
+    let observer = null;
+
     const maxIndex = computed(() => {
         return Math.max(0, articlesList.value.length - itemsPerView.value);
     });
@@ -98,7 +111,7 @@
         } else {
             itemsPerView.value = 1;
             if (currentIndex.value > maxIndex.value) {
-            currentIndex.value = maxIndex.value;
+                currentIndex.value = maxIndex.value;
             }
         }
     };
@@ -106,9 +119,23 @@
     onMounted(() => {
         handleResize();
         window.addEventListener('resize', handleResize);
+
+        observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                isVisible.value = true;
+                observer.unobserve(entry.target);
+            }
+        }, {
+            threshold: 0.3
+        });
+
+        if (articlesSection.value) {
+            observer.observe(articlesSection.value);
+        }
     });
 
     onUnmounted(() => {
         window.removeEventListener('resize', handleResize);
+        if (observer) observer.disconnect();
     });
 </script>

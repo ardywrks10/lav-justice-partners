@@ -1,17 +1,22 @@
 <template>
-  <section class="bg-[#19191a] text-white py-20 px-6 sm:px-8 lg:px-12 border-b border-gray-800">
+  <section ref="whyChooseSection" class="bg-[#19191a] text-white py-20 px-6 sm:px-8 lg:px-12 border-b border-gray-800 overflow-hidden">
     <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
       <div class="flex flex-col gap-8">
-        <div class="space-y-4">
+        
+        <div class="space-y-4 transform transition-all duration-700 ease-out"
+             :class="isVisible ? 'translate-x-0 opacity-100' : '-translate-x-24 opacity-0'">
           <h2 class="text-3xl md:text-4xl font-bold tracking-wide font-serif leading-tight">
             Mengapa Memilih <span class="text-[#F2A900]">LAV Justice Partners</span>
           </h2>
           <p class="text-gray-400 text-md leading-relaxed text-justify">
-            Lebih dari sekadar penasihat hukum, kami bertindak sebagai mitra strategis yang berdedikasi penuh dalam memberikan perlindungan hukum yang komprehensif terhadap bisnis anda</p>
+            Lebih dari sekadar penasihat hukum, kami bertindak sebagai mitra strategis yang berdedikasi penuh dalam memberikan perlindungan hukum yang komprehensif terhadap bisnis anda
+          </p>
         </div>
 
         <div class="flex flex-col gap-6">
-          <div class="flex gap-4 items-center group">
+          <div class="flex gap-4 items-center group transform transition-all duration-700 ease-out delay-[200ms]"
+               :class="isVisible ? 'translate-x-0 opacity-100' : '-translate-x-24 opacity-0'">
             <div class="w-12 h-12 rounded-xl bg-[#222224] border border-gray-800 flex items-center justify-center shrink-0 shadow-md transition-colors group-hover:border-[#F2A900]">
               <svg class="w-6 h-6 text-[#F2A900]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -21,8 +26,8 @@
             <h3 class="text-lg font-bold text-gray-100 tracking-wide">Advokat Senior & Berpengalaman</h3>
           </div>
 
-
-          <div class="flex gap-4 items-center group">
+          <div class="flex gap-4 items-center group transform transition-all duration-700 ease-out delay-[400ms]"
+               :class="isVisible ? 'translate-x-0 opacity-100' : '-translate-x-24 opacity-0'">
             <div class="w-12 h-12 rounded-xl bg-[#222224] border border-gray-800 flex items-center justify-center shrink-0 shadow-md transition-colors group-hover:border-[#F2A900]">
               <svg class="w-6 h-6 text-[#F2A900]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -31,7 +36,8 @@
             <h3 class="text-lg font-bold text-gray-100 tracking-wide">Integritas Tinggi & Kerahasiaan Klien Absolut</h3>
           </div>
           
-          <div class="flex gap-4 items-center group">
+          <div class="flex gap-4 items-center group transform transition-all duration-700 ease-out delay-[600ms]"
+               :class="isVisible ? 'translate-x-0 opacity-100' : '-translate-x-24 opacity-0'">
             <div class="w-12 h-12 rounded-xl bg-[#222224] border border-gray-800 flex items-center justify-center shrink-0 shadow-md transition-colors group-hover:border-[#F2A900]">
               <svg class="w-6 h-6 text-[#F2A900]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -40,7 +46,8 @@
             <h3 class="text-lg font-bold text-gray-100 tracking-wide">Respons Cepat & Layanan Prioritas 24/7</h3>
           </div>
 
-          <div class="flex gap-4 items-center group">
+          <div class="flex gap-4 items-center group transform transition-all duration-700 ease-out delay-[800ms]"
+               :class="isVisible ? 'translate-x-0 opacity-100' : '-translate-x-24 opacity-0'">
             <div class="w-12 h-12 rounded-xl bg-[#222224] border border-gray-800 flex items-center justify-center shrink-0 shadow-md transition-colors group-hover:border-[#F2A900]">
               <svg class="w-6 h-6 text-[#F2A900]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -50,7 +57,10 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col items-center justify-center w-full">
+
+      <div class="flex flex-col items-center justify-center w-full transform transition-all duration-1000 ease-out"
+           :class="isVisible ? 'translate-x-0 opacity-100' : 'translate-x-24 opacity-0'">
+        
         <div class="relative w-full aspect-[16/10] bg-gradient-to-tr from-[#051962]/20 to-[#F2A900]/10 rounded-sm p-8 flex items-center justify-center border border-gray-800/50 overflow-hidden group">
           <div class="absolute -inset-10 bg-[#051962]/10 blur-3xl rounded-full opacity-50 group-hover:opacity-75 transition-opacity"></div>
           <transition name="slide-fade" mode="out-in">
@@ -83,6 +93,7 @@
 
 <script setup>
   import { ref, onMounted, onUnmounted } from 'vue';
+
   const activeSlide = ref(0);
   const slides = ref([
     { 
@@ -97,22 +108,40 @@
       title: 'Jangkauan Seluruh Indonesia', 
       desc: 'Siap memberikan layanan dan pendampingan hukum terbaik untuk masyarakat serta pelaku bisnis di seluruh wilayah Indonesia.' 
     }
-    ]);
+  ]);
 
+  const whyChooseSection = ref(null);
+  const isVisible = ref(false);
+  
   let slideInterval = null;
+  let observer = null;
 
   onMounted(() => {
     slideInterval = setInterval(() => {
       activeSlide.value = (activeSlide.value + 1) % slides.value.length;
     }, 4000);
+
+    observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        isVisible.value = true;
+        observer.unobserve(entry.target);
+      }
+    }, {
+      threshold: 0.3
+    });
+
+    if (whyChooseSection.value) {
+      observer.observe(whyChooseSection.value);
+    }
   });
 
   onUnmounted(() => {
     clearInterval(slideInterval);
+    if (observer) observer.disconnect();
   });
-  </script>
+</script>
 
-  <style scoped>
+<style scoped>
   .slide-fade-enter-active {
     transition: all 0.4s ease-out;
   }
