@@ -1,5 +1,5 @@
 <template>
-  <section ref="articlesSection" class="bg-white text-slate-900 pt-12 pb-12 px-6 sm:px-8 lg:px-12 border-b border-gray-100 overflow-hidden">
+  <section id="articles" ref="articlesSection" class="bg-white text-slate-900 pt-12 pb-12 px-6 sm:px-8 lg:px-12 border-b border-gray-100 overflow-hidden">
     <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-12">
       
       <div class="lg:col-span-1 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-gray-200 pb-8 lg:pb-0 lg:pr-8 transform transition-all duration-1000 ease-out"

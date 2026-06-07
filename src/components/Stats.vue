@@ -13,7 +13,7 @@
           </div>
 
           <!-- Angka: Menengah (3xl di mobile, naik ke 4xl di desktop) -->
-          <h3 class="text-3xl md:text-4xl font-black text-[#1A1A1A] tracking-tight mb-1.5 font-serif">
+          <h3 class="text-2xl md:text-3xl font-black text-[#1A1A1A] tracking-tight mb-1.5 font-serif">
             {{ stat.current }}{{ stat.suffix }}
           </h3>
 
@@ -94,7 +94,7 @@
           STATS.value.forEach(stat => stat.current = 0);
         }
       }, {
-        threshold: 0.2
+        threshold: 0.3
       });
 
       if (statSection.value) {

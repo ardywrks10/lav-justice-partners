@@ -1,5 +1,5 @@
 <template>
-  <section ref="servicesSection" class="bg-white text-slate-900 pt-12 pb-20 px-6 sm:px-8 lg:px-12 overflow-hidden">
+  <section id="services" ref="servicesSection" class="bg-white text-slate-900 pt-12 pb-20 px-6 sm:px-8 lg:px-12 overflow-hidden">
     <div class="max-w-6xl mx-auto space-y-12">
       
       <!-- Header: Datang dari atas -->

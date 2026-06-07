@@ -5,7 +5,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 text-center lg:text-left">
         <div class="col-span-1 lg:col-span-6 xl:col-span-5 rounded-sm border border-white/70 bg-white/95 py-8 px-6 sm:px-8 shadow-2xl backdrop-blur-md backdrop-saturate-200 transform transition-all duration-1000 ease-out"
             :class="isVisible ? 'translate-x-0 opacity-100' : '-translate-x-24 opacity-0'">
-          <h1 class="text-[#1A1A1A] font-serif font-bold text-2xl lg:text-3xl leading-tight lg:leading-[1.2] max-w-xl mx-auto lg:mx-0 min-h-[150px] md:min-h-[180px] flex items-center justify-center lg:justify-start">
+          <h1 class="text-[#1A1A1A] font-serif font-bold text-3xl lg:text-4xl leading-tight lg:leading-[1.2] max-w-xl mx-auto lg:mx-0 min-h-[150px] md:min-h-[180px] flex items-center justify-center lg:justify-start">
             <span>
               {{ displayedText }}<span class="animate-blink font-light text-[#051962]">|</span>
             </span>
