@@ -69,7 +69,7 @@
           <div v-for="item in menuItems" :key="item.id" class="border-b border-white/5 last:border-none">
             
             <template v-if="item.subItems">
-              <button @click="toggleSubmenu(item.id)" class="flex items-center justify-between w-full py-4 text-lg font-bold text-white hover:text-[#F2A900] transition-colors">
+              <button @click="toggleSubmenu(item.id)" class="flex items-center justify-between w-full py-4 text-lg font-bold text-white hover:text-[#F2A900] transition-colors" aria-label="Buka Menu Navigasi">
                 {{ item.name }}
                 <svg class="w-5 h-5 transition-transform duration-300 text-white/70" :class="{ 'rotate-180 text-[#F2A900]': activeMobileSubmenu === item.id }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />

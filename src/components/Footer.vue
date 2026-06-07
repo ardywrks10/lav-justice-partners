@@ -41,7 +41,7 @@
                 </svg>
                 <div>
                 <h4 class="text-base font-bold text-gray-400 tracking-wider mb-1">Address</h4>
-                <a href="https://maps.app.goo.gl/FoMisn5HktmjrGH36" target="_blank" rel="noopener noreferrer" class="text-gray-300 leading-relaxed">Tukad Unda St No.8, Panjer, Denpasar Selatan, Denpasar City</a>
+                <a href="https://maps.app.goo.gl/FoMisn5HktmjrGH36" target="_blank" rel="noopener noreferrer" class="text-gray-300 leading-relaxed">Jl. Tukad Unda No.8, Panjer, Denpasar Selatan, Kota Denpasar</a>
                 </div>
             </div>
 
@@ -80,13 +80,14 @@
           <input v-model="formInquiry.email" type="email" placeholder="Email" class="w-full bg-[#222224] border border-gray-800 focus:border-[#002D72] focus:outline-none p-3 text-sm text-gray-200 rounded-sm" required>
           <textarea v-model="formInquiry.needs" rows="3" placeholder="Ceritakan kebutuhanmu kepada kami......." class="w-full bg-[#222224] border border-gray-800 focus:border-[#002D72] focus:outline-none p-3 text-sm text-gray-200 rounded-sm resize-none" required></textarea>
           
-          <button type="submit" class="w-full md:w-auto self-start mt-2 px-8 py-3 bg-[#F2A900] hover:bg-[#D49400] text-white text-sm font-bold tracking-widest uppercase transition-all duration-300 rounded-sm shadow-md">
+          <button type="submit" class="w-full md:w-auto self-start mt-2 px-8 py-3 bg-[#F2A900] hover:bg-[#D49400] text-slate-950 font-extrabold tracking-widest uppercase transition-all duration-300 rounded-sm shadow-md text-sm">
             Submit Inquiry
           </button>
         </form>
       </div>
     </div>
-    <div class="border-t border-gray-800 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[10px] text-gray-500 tracking-[0.2em]">
+    
+    <div class="border-t border-gray-800 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-gray-400 tracking-[0.2em]">
       <p>Copyright 2026 © LAV Justice Partners.</p>
       <p>All Rights Reserved.</p>
     </div>

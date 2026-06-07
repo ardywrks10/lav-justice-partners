@@ -7,18 +7,15 @@
           :key="index"
           class="p-6 md:p-8 bg-gray-50 border-t-4 border-[#051962] shadow-md flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
         >
-          <!-- Icon: Naik tipis dari versi awal (dari 28px ke 32px-36px) -->
           <div class="p-3 bg-[#F2A900]/5 text-[#F2A900] mb-4">
             <component :is="stat.icon" class="w-8 h-8 md:w-9 md:h-9" />
           </div>
 
-          <!-- Angka: Menengah (3xl di mobile, naik ke 4xl di desktop) -->
-          <h3 class="text-2xl md:text-3xl font-black text-[#1A1A1A] tracking-tight mb-1.5 font-serif">
+          <div class="text-2xl md:text-3xl font-black text-[#1A1A1A] tracking-tight mb-1.5 font-serif">
             {{ stat.current }}{{ stat.suffix }}
-          </h3>
+          </div>
 
-          <!-- Label: Tetap compact, proporsional dengan angka -->
-          <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">
+          <p class="text-xs font-bold text-gray-600 uppercase tracking-widest">
             {{ stat.title }}
           </p>
         </div>

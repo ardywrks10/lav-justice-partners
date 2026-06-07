@@ -42,6 +42,7 @@
         <div class="w-full lg:flex-1 h-[220px] md:h-[260px] overflow-hidden shadow-2xl shadow-[#051962]/15 transform transition-all duration-1000 ease-out"
              :class="isVisible ? 'translate-x-0 opacity-100' : 'translate-x-16 opacity-0'">
           <iframe 
+            title="Peta Lokasi Kantor LAV Justice Partners"
             src="https://maps.google.com/maps?q=-8.673,115.224&t=k&z=17&output=embed" 
             class="w-full h-full rounded-sm border-0 transition-all duration-500 ease-in-out"
             loading="lazy" 
