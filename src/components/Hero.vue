@@ -1,6 +1,7 @@
 <template>
-  <section id="home" ref="homeSection" class="relative flex min-h-[85vh] w-full items-center justify-center overflow-hidden bg-gray-100">
+  <section id="home" ref="homeSection" class="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-gray-100 pt-32 pb-12 sm:pt-36 lg:pt-40 lg:pb-16">
     <img src="/public/images/images8.jpg" alt="bg-img" class="absolute right-0 top-0 h-full w-full object-cover lg:w-[60%] lg:rounded-bl-[120px]"/> 
+    
     <div class="container mx-auto px-6 sm:px-10 relative z-10 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-12 text-center lg:text-left">
         <div class="col-span-1 lg:col-span-6 xl:col-span-5 rounded-sm border border-white/70 bg-white/95 py-8 px-6 sm:px-8 shadow-2xl backdrop-blur-md backdrop-saturate-200 transform transition-all duration-1000 ease-out"
@@ -14,12 +15,12 @@
             <span class="font-bold text-[#051962]">LAV Justice Partners</span> hadir sebagai mitra hukum profesional yang mengutamakan integritas, keadilan, dedikasi, dan kepercayaan
           </p>
           <div class="mb-8 flex flex-col sm:flex-row justify-center gap-4 lg:justify-start">
-            <button class="px-7 py-3.5 bg-[#051962] text-white text-sm font-bold tracking-widest rounded-none border border-[#051962] shadow-md transition-all transform hover:-translate-y-0.5">
-                Jelajahi Layanan
-            </button>
-            <button class="px-7 py-3.5 bg-transparent text-[#212121] text-sm font-bold tracking-widest rounded-none border border-gray-300 transition-all shadow-md transform hover:-translate-y-0.5">
-                Hubungi Kami
-            </button>
+            <router-link to="/#services" class="inline-block text-center px-7 py-3.5 bg-[#051962] text-white text-sm font-bold tracking-widest rounded-none border border-[#051962] shadow-md transition-all transform hover:-translate-y-0.5">
+              Jelajahi Layanan
+            </router-link>
+            <a href="https://wa.me/6287861413066" target="_blank" rel="noopener noreferrer" class="inline-block text-center px-7 py-3.5 bg-transparent text-[#212121] text-sm font-bold tracking-widest rounded-none border border-gray-300 transition-all shadow-md transform hover:-translate-y-0.5">
+              Hubungi Kami
+            </a>
           </div>
         </div>
       </div>
