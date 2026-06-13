@@ -3,28 +3,48 @@
     
     <!-- ================= BARIS INFORMASI TAMBAHAN (TOP BAR) ================= -->
     <div class="bg-[#002D72] text-white text-xs py-2.5 px-6 sm:px-8 lg:px-12 border-b border-white/10">
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3 tracking-wide font-medium">
+      <div class="max-w-7xl mx-auto flex flex-row justify-between items-center w-full tracking-wide font-medium">
         
-        <!-- SISI KIRI: Telepon di kiri, Email di kanan saat mobile -->
-        <div class="w-full sm:w-auto flex items-center justify-between sm:justify-start sm:gap-4">
+        <!-- SISI KIRI: Ikon Telepon, Email, dan (Sosmed khusus Mobile) -->
+        <div class="flex items-center gap-4 sm:gap-4">
+          <!-- Telepon -->
           <a href="https://wa.me/6287861413066" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-[#F2A900] transition-colors group">
-            <svg class="w-3.5 h-3.5 text-[#F2A900] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 sm:w-3.5 sm:h-3.5 text-[#F2A900] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <span>+62 878-6141-3066</span>
+            <span class="hidden sm:inline">+62 878-6141-3066</span>
           </a>
+          
           <span class="text-white/20 hidden sm:inline">|</span>
+          
+          <!-- Email -->
           <a href="mailto:lawvina90@gmail.com" class="flex items-center gap-2 hover:text-[#F2A900] transition-colors group">
-            <svg class="w-3.5 h-3.5 text-[#F2A900] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 sm:w-3.5 sm:h-3.5 text-[#F2A900] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            <span>lawvina90@gmail.com</span>
+            <span class="hidden sm:inline">lawvina90@gmail.com</span>
+          </a>
+
+          <!-- Sosial Media (Hanya Muncul di Sisi Kiri Saat Mobile) -->
+          <a href="https://www.facebook.com/lavjustice" target="_blank" rel="noopener noreferrer" class="sm:hidden hover:text-[#F2A900] transition-colors" aria-label="LAV Justice Partners di Facebook">
+            <svg class="w-4 h-4 text-[#F2A900]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19.141 2.375h-2.518c-3.111 0-5.12 2.062-5.12 5.247v2.421h-2.833v3.197h2.833v8.085h3.316v-8.085h2.846l.423-3.197h-3.269V8.04c0-1.077.297-1.81 1.832-1.81h1.961v-2.855z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/lavjustice/" target="_blank" rel="noopener noreferrer" class="sm:hidden hover:text-[#F2A900] transition-colors" aria-label="LAV Justice Partners di Instagram">
+            <svg class="w-4 h-4 text-[#F2A900]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <rect width="18" height="18" x="3" y="3" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="3.5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
           </a>
         </div>
         
-        <!-- SISI KANAN: Ikuti Kami di kiri, Bantuan di kanan saat mobile -->
-        <div class="w-full sm:w-auto flex items-center justify-between sm:justify-end sm:gap-4">
-          <div class="flex items-center gap-3">
+        <!-- SISI KANAN: Ikuti Kami (Desktop) & Bantuan (Mobile + Desktop) -->
+        <div class="flex items-center gap-4">
+          
+          <!-- Sosial Media (Hanya Muncul di Sisi Kanan Saat Desktop) -->
+          <div class="hidden sm:flex items-center gap-3">
             <span class="text-white">Ikuti kami di</span>
             <div class="flex items-center gap-3">
               <a href="https://www.facebook.com/lavjustice" target="_blank" rel="noopener noreferrer" class="hover:text-[#F2A900] transition-colors" aria-label="LAV Justice Partners di Facebook">
@@ -44,6 +64,7 @@
 
           <span class="text-white/20 hidden sm:inline">|</span>
 
+          <!-- Bantuan -->
           <router-link to="/help" class="flex items-center gap-1.5 hover:text-[#F2A900] transition-colors font-bold" aria-label="Halaman Bantuan">
             <svg class="w-4 h-4 text-[#F2A900]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

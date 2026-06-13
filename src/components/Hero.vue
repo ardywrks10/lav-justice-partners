@@ -4,11 +4,13 @@
     
     <div class="container mx-auto px-6 sm:px-10 relative z-10 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-12 text-center lg:text-left">
-        <div class="col-span-1 lg:col-span-6 xl:col-span-5 rounded-sm border border-white/70 bg-white/95 py-8 px-6 sm:px-8 shadow-2xl backdrop-blur-md backdrop-saturate-200 transform transition-all duration-1000 ease-out"
+        <!-- Penambahan border atas biru dan margin negatif (-mt-8 lg:-mt-16) untuk menaikkan card -->
+        <div class="col-span-1 lg:col-span-6 xl:col-span-5 rounded-sm border-t-4 border-t-[#051962] border-x border-b border-white/70 bg-white/95 py-8 px-6 sm:px-8 shadow-2xl backdrop-blur-md backdrop-saturate-200 transform transition-all duration-1000 ease-out -mt-8 lg:-mt-16"
             :class="isVisible ? 'translate-x-0 opacity-100' : '-translate-x-24 opacity-0'">
           <h1 class="text-[#1A1A1A] font-serif font-bold text-3xl lg:text-4xl leading-tight lg:leading-[1.2] max-w-xl mx-auto lg:mx-0 min-h-[150px] md:min-h-[180px] flex items-center justify-center lg:justify-start">
             <span>
-              {{ displayedText }}<span class="animate-blink font-light text-[#051962]">|</span>
+              <!-- Perubahan warna kursor menjadi kuning (#F2A900) -->
+              {{ displayedText }}<span class="animate-blink font-light text-[#F2A900]">|</span>
             </span>
           </h1>
           <p class="text-lg font-semibold mb-4 mt-3 text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
