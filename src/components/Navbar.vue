@@ -217,7 +217,7 @@
           { name: 'Lisensi dan Permit Bisnis', link: '/services/lisensi-dan-permit-bisnis', desc: 'Izin Operasional & Komersial, Sertifikasi Sektoral (OSS-RBA), dan Pemenuhan Komitmen Regulasi' }
         ]
     },
-    { id: 3, name: 'About Us', link: '/#about' },
+    { id: 3, name: 'About Us', link: '/about' },
     { id: 4, name: 'Articles & News', link: '/#articles' },
     { id: 5, name: 'Contact Us', link: '/#contact' }
     ];
