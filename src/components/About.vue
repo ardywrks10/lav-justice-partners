@@ -76,7 +76,7 @@
           <!-- KOLOM KIRI: TEKS BIOGRAFI -->
           <div class="lg:col-span-7 space-y-8 text-justify">
             <p class="text-lg text-gray-800 leading-relaxed font-medium">
-              Luh Ayu Vinayanti (lahir 4 Maret 1990) adalah seorang advokat dan pebisnis asal Kabupaten Buleleng, Bali.
+              Luh Ayu Vinayanti (lahir 4 Maret 1990) adalah seorang advokat dan pebisnis asal Kabupaten Buleleng, Bali. Vina dikenal melalui aktivitas profesionalnya di bidang hukum dan kewirausahaan, serta keterlibatannya dalam berbagai kegiatan yang mendukung perkembangan dunia usaha dan pelayanan hukum.
             </p>
             
             <h2 class="text-3xl font-serif font-bold text-[#002D72] border-b border-gray-300 pb-2">Kehidupan awal dan pendidikan</h2>
