@@ -91,7 +91,7 @@
                 Vina aktif sebagai konsultan hukum bagi sejumlah perusahaan di Bali, khususnya dalam bidang pendirian badan usaha, perizinan, hukum korporasi, serta perusahaan penanaman modal asing (PMA). Pada 25 Agustus 2025, ia lulus 
                 <a href="https://peradi.id/ujian-profesi-advokat/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-[#002D72] hover:underline transition-colors font-medium">Ujian Profesi Advokat (UPA)</a> 
                 yang diselenggarakan oleh 
-                <a href="https://www.peradi.or.id/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-[#002D72] hover:underline transition-colors font-medium">PERADI</a>. Ia kemudian menjalani pengambilan sumpah advokat pada 24 Februari 2026.
+                <a href="https://www.peradi.or.id/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-[#002D72] hover:underline transition-colors font-medium">PERADI</a> dan menjalani pengambilan sumpah advokat pada 24 Februari 2026.
               </p>
               <p>
                 Selain berkarier di bidang hukum, Vina juga aktif dalam kegiatan usaha, sosial, dan pendidikan. Ia terlibat dalam Yayasan Warna Bangsa Mandiri serta menjabat sebagai Direktur Utama 
