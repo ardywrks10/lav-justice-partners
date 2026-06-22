@@ -103,9 +103,9 @@
 
             <h2 class="text-3xl font-serif font-bold text-[#002D72] border-b border-gray-300 pb-2">Riwayat pendidikan</h2>
             <ul class="list-disc pl-6 space-y-2 text-lg text-gray-700">
-              <li>SMK Negeri 3 Singaraja, Bali</li>
-              <li>Fakultas Hukum Universitas Tritunggal Surabaya, Jawa Timur</li>
-              <li>Magister Ilmu Hukum Universitas Mahendradatta, Bali</li>
+              <li>SMK Negeri 3 Singaraja, Bali (2005 - 2008)</li>
+              <li>Fakultas Hukum Universitas Tritunggal Surabaya, Jawa Timur (2009 - 2013)</li>
+              <li>Magister Ilmu Hukum Universitas Mahendradatta, Bali (2025 - Sekarang)</li>
             </ul>
 
             <h2 class="text-3xl font-serif font-bold text-[#002D72] border-b border-gray-300 pb-2">Referensi</h2>
