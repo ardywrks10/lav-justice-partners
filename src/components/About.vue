@@ -1,6 +1,70 @@
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const sliderRef = ref(null)
+const scrollProgress = ref(0)
+const isAtStart = ref(true)
+const isAtEnd = ref(false)
+
+const certificates = [
+  {
+    issuer: "DPP IKADIN & Univ. Mahendradatta",
+    title: "Pendidikan Khusus Profesi Advokat (PKPA)",
+    badge: "2025", 
+    image: "/sertif/bas-advokat.jpg" 
+  },
+  {
+    issuer: "Kementerian HAM RI",
+    title: "Kuliah Umum Hak Asasi Manusia",
+    badge: "2025", 
+    image: "/sertif/sertif_3.jpg" 
+  },
+  {
+    issuer: "PERADI",
+    title: "Lulus Ujian Profesi Advokat (UPA)",
+    badge: "2025", 
+    image: "/sertif/peradi.jpg" 
+  }
+]
+
+const handleScroll = () => {
+  if (!sliderRef.value) return
+  const el = sliderRef.value
+  const maxScroll = el.scrollWidth - el.clientWidth
+
+  if (maxScroll <= 0) {
+    scrollProgress.value = 100
+    isAtStart.value = true
+    isAtEnd.value = true
+    return
+  }
+
+  const currentScroll = el.scrollLeft
+  scrollProgress.value = (currentScroll / maxScroll) * 100
+
+  isAtStart.value = currentScroll <= 5
+  isAtEnd.value = currentScroll >= maxScroll - 5
+}
+
+const scrollNext = () => {
+  if (!sliderRef.value) return
+  const cardWidth = sliderRef.value.firstElementChild?.clientWidth || 320
+  sliderRef.value.scrollBy({ left: cardWidth + 24, behavior: 'smooth' })
+}
+
+const scrollPrev = () => {
+  if (!sliderRef.value) return
+  const cardWidth = sliderRef.value.firstElementChild?.clientWidth || 320
+  sliderRef.value.scrollBy({ left: -(cardWidth + 24), behavior: 'smooth' })
+}
+
+onMounted(() => {
+  setTimeout(() => handleScroll(), 150)
+})
+</script>
+
 <template>
   <div class="about-bio-container">
-    <!-- HERO SECTION -->
     <section class="pt-20 pb-12 bg-gradient-to-b from-slate-100/70 to-white relative">
       <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
@@ -68,7 +132,6 @@
       </div>
     </section>
 
-    <!-- CONTENT SECTION -->
     <section class="pb-12 bg-white relative">
       <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div class="flex flex-col-reverse lg:grid lg:grid-cols-12 gap-12 items-start">
@@ -160,5 +223,93 @@
         </div>
       </div>
     </section>
+    <section class="pb-16 bg-slate-50/70 relative overflow-hidden">
+      <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+        
+        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#002D72] border-b border-gray-300 pb-3 mb-8">
+          Sertifikat & Lisensi
+        </h2>
+        
+        <div 
+          ref="sliderRef" 
+          @scroll="handleScroll" 
+          class="w-full flex gap-6 overflow-x-auto touch-pan-x no-scrollbar scroll-smooth snap-x snap-mandatory pb-6 pt-2"
+        >
+          <div 
+            v-for="(item, idx) in certificates" 
+            :key="idx"
+            class="shrink-0 w-[270px] sm:w-[320px] snap-start group cursor-pointer"
+          >
+            <div class="aspect-[4/3] bg-white rounded-xl border border-gray-200/90 p-3 shadow-sm group-hover:shadow-md group-hover:border-[#002D72]/40 transition-all duration-300 relative overflow-hidden flex items-center justify-center">
+              
+              <div class="absolute top-3 right-3 bg-[#002D72] text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-md uppercase tracking-wider z-10 shadow-sm">
+                {{ item.badge }}
+              </div>
+
+              <div class="w-full h-full rounded-lg overflow-hidden bg-slate-100 flex items-center justify-center">
+                <img 
+                  v-if="item.image"
+                  :src="item.image" 
+                  :alt="item.title"
+                  class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+                  loading="lazy"
+                />                
+                <div v-else class="w-full h-full border border-dashed border-slate-300 flex flex-col items-center justify-center p-4 text-center bg-slate-50">
+                  <span class="text-[11px] font-serif text-slate-400">Gambar belum tersedia</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 space-y-1 pr-2">
+              <div class="text-xs font-bold text-[#F2A900] tracking-wider uppercase">
+                {{ item.issuer }}
+              </div>
+              <h3 class="text-base font-bold text-gray-900 group-hover:text-[#002D72] transition-colors leading-snug">
+                {{ item.title }}
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex items-center justify-between gap-4 max-w-sm mx-auto">
+          <button 
+            @click="scrollPrev" 
+            :disabled="isAtStart"
+            class="w-10 h-10 rounded-full border border-gray-300 bg-white text-gray-800 flex items-center justify-center hover:bg-[#002D72] hover:text-white hover:border-[#002D72] transition-all shrink-0 shadow-sm disabled:opacity-30 disabled:hover:bg-white disabled:hover:text-gray-800 disabled:cursor-not-allowed"
+            aria-label="Geser ke kiri"
+          >
+            <svg class="w-4 h-4 translate-x-[-1px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+
+          <div class="flex-1 h-1 bg-gray-200 rounded-full overflow-hidden relative">
+            <div 
+              class="absolute top-0 left-0 bottom-0 bg-[#002D72] rounded-full transition-all duration-150 ease-out" 
+              :style="{ width: scrollProgress + '%' }"
+            ></div>
+          </div>
+
+          <button 
+            @click="scrollNext" 
+            :disabled="isAtEnd"
+            class="w-10 h-10 rounded-full border border-gray-300 bg-white text-gray-800 flex items-center justify-center hover:bg-[#002D72] hover:text-white hover:border-[#002D72] transition-all shrink-0 shadow-sm disabled:opacity-30 disabled:hover:bg-white disabled:hover:text-gray-800 disabled:cursor-not-allowed"
+            aria-label="Geser ke kanan"
+          >
+            <svg class="w-4 h-4 translate-x-[1px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
   </div>
 </template>
+
+<style scoped>
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE dan Edge */
+    scrollbar-width: none;  /* Firefox */
+    -webkit-overflow-scrolling: touch; /* Mengaktifkan momentum scroll yang lancar di mobile */
+  }
+</style>
