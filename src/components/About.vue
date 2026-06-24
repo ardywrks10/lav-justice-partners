@@ -11,7 +11,7 @@ const certificates = [
     issuer: "DPP IKADIN & Univ. Mahendradatta",
     title: "Pendidikan Khusus Profesi Advokat (PKPA)",
     badge: "2025", 
-    image: "/sertif/bas-advokat.jpg" 
+    image: "/sertif/peradi.jpg" 
   },
   {
     issuer: "Kementerian HAM RI",
@@ -23,7 +23,7 @@ const certificates = [
     issuer: "PERADI",
     title: "Lulus Ujian Profesi Advokat (UPA)",
     badge: "2025", 
-    image: "/sertif/peradi.jpg" 
+    image: "/sertif/bas-advokat.jpg" 
   }
 ]
 
@@ -226,37 +226,35 @@ onMounted(() => {
     <section class="pb-16 bg-slate-50/70 relative overflow-hidden">
       <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         
-        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#002D72] border-b border-gray-300 pb-3 mb-8">
+        <h2 class="text-3xl sm:text-3xl font-serif font-bold text-[#002D72] border-b border-gray-300 pb-3 mb-8">
           Sertifikat & Lisensi
         </h2>
         
         <div 
           ref="sliderRef" 
           @scroll="handleScroll" 
-          class="w-full flex gap-6 overflow-x-auto touch-pan-x no-scrollbar scroll-smooth snap-x snap-mandatory pb-6 pt-2"
+          class="w-full flex gap-6 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory pb-6 pt-2"
         >
           <div 
             v-for="(item, idx) in certificates" 
             :key="idx"
-            class="shrink-0 w-[270px] sm:w-[320px] snap-start group cursor-pointer"
+            class="shrink-0 w-[260px] sm:w-[310px] snap-start group cursor-pointer relative"
           >
-            <div class="aspect-[4/3] bg-white rounded-xl border border-gray-200/90 p-3 shadow-sm group-hover:shadow-md group-hover:border-[#002D72]/40 transition-all duration-300 relative overflow-hidden flex items-center justify-center">
-              
-              <div class="absolute top-3 right-3 bg-[#002D72] text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-md uppercase tracking-wider z-10 shadow-sm">
-                {{ item.badge }}
-              </div>
+            
+            <div class="absolute top-3 right-3 bg-[#002D72] text-white text-[10px] font-extrabold px-2.5 py-0.5 rounded-md uppercase tracking-wider z-10 shadow-md">
+              {{ item.badge }}
+            </div>
 
-              <div class="w-full h-full rounded-lg overflow-hidden bg-slate-100 flex items-center justify-center">
-                <img 
-                  v-if="item.image"
-                  :src="item.image" 
-                  :alt="item.title"
-                  class="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
-                  loading="lazy"
-                />                
-                <div v-else class="w-full h-full border border-dashed border-slate-300 flex flex-col items-center justify-center p-4 text-center bg-slate-50">
-                  <span class="text-[11px] font-serif text-slate-400">Gambar belum tersedia</span>
-                </div>
+            <div class="w-full aspect-[4/3] flex items-center justify-center relative overflow-hidden rounded-lg">
+              <img 
+                v-if="item.image"
+                :src="item.image" 
+                :alt="item.title"
+                class="w-full h-full object-contain rounded-lg drop-shadow-md group-hover:scale-[1.03] transition-transform duration-500"
+                loading="lazy"
+              />                
+              <div v-else class="w-full h-full border border-dashed border-slate-300 flex flex-col items-center justify-center p-4 text-center bg-slate-100 rounded-lg">
+                <span class="text-[11px] font-serif text-slate-400">Gambar belum tersedia</span>
               </div>
             </div>
 
@@ -268,10 +266,11 @@ onMounted(() => {
                 {{ item.title }}
               </h3>
             </div>
+
           </div>
         </div>
 
-        <div class="mt-8 flex items-center justify-between gap-4 max-w-sm mx-auto">
+        <div class="mt-4 flex items-center justify-between gap-4 max-w-sm mx-auto">
           <button 
             @click="scrollPrev" 
             :disabled="isAtStart"
