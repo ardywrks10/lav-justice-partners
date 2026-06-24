@@ -1,13 +1,8 @@
 <template>
   <nav class="fixed top-0 left-0 w-full z-50 bg-white/75 backdrop-blur-md border-b border-white/20 shadow-sm transition-all duration-300">
-    
-    <!-- ================= BARIS INFORMASI TAMBAHAN (TOP BAR) ================= -->
     <div class="bg-[#002D72] text-white text-xs py-2.5 px-6 sm:px-8 lg:px-12 border-b border-white/10">
       <div class="max-w-7xl mx-auto flex flex-row justify-between items-center w-full tracking-wide font-medium">
-        
-        <!-- SISI KIRI: Ikon Telepon, Email, dan (Sosmed khusus Mobile) -->
         <div class="flex items-center gap-4 sm:gap-4">
-          <!-- Telepon -->
           <a href="https://wa.me/6287861413066" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-[#F2A900] transition-colors group">
             <svg class="w-4 h-4 sm:w-3.5 sm:h-3.5 text-[#F2A900] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -17,7 +12,6 @@
           
           <span class="text-white/20 hidden sm:inline">|</span>
           
-          <!-- Email -->
           <a href="mailto:lawvina90@gmail.com" class="flex items-center gap-2 hover:text-[#F2A900] transition-colors group">
             <svg class="w-4 h-4 sm:w-3.5 sm:h-3.5 text-[#F2A900] group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -25,7 +19,6 @@
             <span class="hidden sm:inline">lawvina90@gmail.com</span>
           </a>
 
-          <!-- Sosial Media (Hanya Muncul di Sisi Kiri Saat Mobile) -->
           <a href="https://www.facebook.com/lavjustice" target="_blank" rel="noopener noreferrer" class="sm:hidden hover:text-[#F2A900] transition-colors" aria-label="LAV Justice Partners di Facebook">
             <svg class="w-4 h-4 text-[#F2A900]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19.141 2.375h-2.518c-3.111 0-5.12 2.062-5.12 5.247v2.421h-2.833v3.197h2.833v8.085h3.316v-8.085h2.846l.423-3.197h-3.269V8.04c0-1.077.297-1.81 1.832-1.81h1.961v-2.855z"/>
@@ -40,10 +33,7 @@
           </a>
         </div>
         
-        <!-- SISI KANAN: Ikuti Kami (Desktop) & Bantuan (Mobile + Desktop) -->
-        <div class="flex items-center gap-4">
-          
-          <!-- Sosial Media (Hanya Muncul di Sisi Kanan Saat Desktop) -->
+        <div class="flex items-center gap-4">          
           <div class="hidden sm:flex items-center gap-3">
             <span class="text-white">Ikuti kami di</span>
             <div class="flex items-center gap-3">
@@ -96,26 +86,23 @@
               <span class="absolute left-0 bottom-0 w-0 h-0.5 bg-[#F2A900] transition-all duration-300 group-hover:w-full"></span>
             </router-link>
 
-            <div v-if="item.subItems" class="absolute left-1/2 -translate-x-1/2 top-[90%] w-[calc(100vw-3rem)] max-w-4xl bg-white border border-gray-100 shadow-2xl rounded-sm p-6 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
-              <div class="border-b border-gray-100 pb-3 mb-4">
-                <h3 class="text-xl font-black tracking-tight text-[#002D72]">{{ item.name }}</h3>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div v-if="item.subItems" class="absolute left-0 top-[90%] w-[360px] bg-white border border-gray-100 shadow-2xl rounded-sm p-4 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-50">
+              <div class="flex flex-col gap-1">
                 <router-link 
                   v-for="sub in item.subItems" 
                   :key="sub.name" 
                   :to="sub.link" 
-                  class="block p-3 rounded-sm hover:bg-[#002D72]/5 transition-all group/item"
+                  class="block p-2.5 rounded-sm hover:bg-[#002D72]/5 transition-all group/item"
                 >
-                  <div class="text-base font-bold text-[#002D72] group-hover/item:text-[#F2A900] transition-colors">
+                  <div class="text-sm font-bold text-[#002D72] group-hover/item:text-[#F2A900] transition-colors">
                     {{ sub.name }}
                   </div>
-                  <div class="text-xs text-gray-500 mt-1 font-normal leading-relaxed">
+                  <div class="text-[11px] text-gray-500 mt-0.5 font-normal leading-normal">
                     {{ sub.desc }}
                   </div>
                 </router-link>
               </div>
+
             </div>
           </div>
         </div>
@@ -123,7 +110,7 @@
         <div class="hidden lg:flex items-center">
           <router-link to="/booking" class="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-bold rounded-sm bg-[#002D72] text-white hover:bg-[#0A3161] transition-all shadow-md transform hover:-translate-y-0.5">
             <span class="w-2.5 h-2.5 rounded-full bg-[#F2A900]"></span>
-            Book Consultation
+            Mulai Konsultasi
           </router-link>
         </div>
 
@@ -177,7 +164,7 @@
             </template>
 
             <router-link 
-              :to="item.link" 
+              v-else :to="item.link" 
               @click="isMobileMenuOpen = false" 
               class="block py-3.5 text-base font-bold text-white hover:text-[#F2A900] transition-colors tracking-wide"
             >
@@ -189,7 +176,7 @@
         
         <div class="p-5 border-t border-white/10 bg-[#001E4D]">
           <router-link to="/booking" @click="isMobileMenuOpen = false" class="flex justify-center items-center gap-2 w-full py-3.5 text-base font-black rounded-sm bg-[#F2A900] text-slate-950 hover:bg-[#d69500] transition-colors shadow-lg tracking-wide">
-            Book Consultation
+            Mulai Konsultasi
           </router-link>
         </div>
       </div>
@@ -204,10 +191,10 @@
     const activeMobileSubmenu = ref(null);
 
     const menuItems = [
-    { id: 1, name: 'Home', link: '/#home'},
+    { id: 1, name: 'Beranda', link: '/#home'},
     { 
         id: 2, 
-        name: 'Services', 
+        name: 'Layanan', 
         link: '/#services',
         subItems: [
           { name: 'Pendirian Badan Usaha', link: '/services/pendirian-badan-usaha', desc: 'Pendirian PT, CV, & PMA, Legalitas Korporasi, dan Anggaran Dasar & Kepatuhan' },
@@ -217,9 +204,9 @@
           { name: 'Lisensi dan Permit Bisnis', link: '/services/lisensi-dan-permit-bisnis', desc: 'Izin Operasional & Komersial, Sertifikasi Sektoral (OSS-RBA), dan Pemenuhan Komitmen Regulasi' }
         ]
     },
-    { id: 3, name: 'About Us', link: '/about' },
-    { id: 4, name: 'Articles & News', link: '/#articles' },
-    { id: 5, name: 'Contact Us', link: '/#contact' }
+    { id: 3, name: 'Tentang Kami', link: '/about' },
+    { id: 4, name: 'Artikel & Berita', link: '/#articles' },
+    { id: 5, name: 'Kontak Kami', link: '/#contact' }
     ];
 
     const toggleMobileMenu = () => isMobileMenuOpen.value = !isMobileMenuOpen.value;

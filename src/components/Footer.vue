@@ -18,11 +18,11 @@
           </h3>
         </div>
         <ul class="flex flex-col gap-3 text-base text-gray-400">
-          <li><a href="#home" class="hover:text-[#F2A900] transition-colors">Home</a></li>
-          <li><a href="#services" class="hover:text-[#F2A900] transition-colors">Services</a></li>
-          <li><a href="#about" class="hover:text-[#F2A900] transition-colors">About Us</a></li>
-          <li><a href="#articles" class="hover:text-[#F2A900] transition-colors">Articles</a></li>
-          <li><a href="#contact" class="hover:text-[#F2A900] transition-colors">Contact Us</a></li>
+          <li><a href="#home" class="hover:text-[#F2A900] transition-colors">Beranda</a></li>
+          <li><a href="#services" class="hover:text-[#F2A900] transition-colors">Layanan</a></li>
+          <li><a href="#about" class="hover:text-[#F2A900] transition-colors">Tentang Kami</a></li>
+          <li><a href="#articles" class="hover:text-[#F2A900] transition-colors">Artikel & Berita</a></li>
+          <li><a href="#contact" class="hover:text-[#F2A900] transition-colors">Kontak Kami</a></li>
         </ul>
       </div>
 
@@ -40,7 +40,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <div>
-                <h4 class="text-base font-bold text-gray-400 tracking-wider mb-1">Address</h4>
+                <h4 class="text-base font-bold text-gray-400 tracking-wider mb-1">Alamat</h4>
                 <a href="https://maps.app.goo.gl/FoMisn5HktmjrGH36" target="_blank" rel="noopener noreferrer" class="text-gray-300 leading-relaxed">Jl. Tukad Unda No.8, Panjer, Denpasar Selatan, Kota Denpasar</a>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 <div>
-                <h4 class="text-base font-bold text-gray-400 tracking-wider mb-1">Phone</h4>
+                <h4 class="text-base font-bold text-gray-400 tracking-wider mb-1">No. Telepon</h4>
                 <a href="https://wa.me/6287861413066" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-[#F2A900] transition-colors">+62 878 - 6141 - 3066</a>
                 </div>
             </div>

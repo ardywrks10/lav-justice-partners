@@ -45,15 +45,21 @@ const certificates = [
   },
   {
     issuer: "Kementerian HAM RI",
-    title: "Kuliah Umum Hak Asasi Manusia",
+    title: "Kuliah Umum dengan tema 'Mainstream HAM' oleh Kementrian Hak Asasi Manusia",
     badge: "2025", 
     image: "/sertif/sertif_3.jpg" 
   },
   {
     issuer: "PERADI",
-    title: "Lulus Ujian Profesi Advokat (UPA)",
+    title: "Kelulusan Ujian Profesi Advokat (UPA)",
     badge: "2025", 
     image: "/sertif/bas-advokat.jpg" 
+  },
+  {
+    issuer: "Universitas Tritunggal Surabaya",
+    title : "Sarjana Hukum (S.H) dari Universitas Tritunggal Surabaya",
+    badge : "2013",
+    image : "/sertif/ijazah_s1.jpeg"
   }
 ]
 
